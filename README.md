@@ -1,1 +1,7 @@
-# Image-vector-DB-similarity-search
+# Image vector DB similarity search
+  Image search algorithms utilizing vector databases are powerful tools for finding similar images based on input queries. Here's a brief overview of the process:
+  - Each image in the database is processed through a feature extraction model, often a pre-trained convolutional neural network (CNN) like ResNet. This converts images into high-dimensional vectors representing their visual features.
+  - The extracted feature vectors are stored in NPY files, a format for efficiently storing and handling large arrays in Python using NumPy. These NPY files are then used to populate a vector database, such as FAISS (Facebook AI Similarity Search) or Annoy (Approximate Nearest Neighbors Oh Yeah).
+  - When a user inputs an image, it undergoes the same feature extraction process to obtain its feature vector. This query vector is then compared against the vectors in the database to find the most similar images.
+  - The vector database employs algorithms like K-Nearest Neighbors (K-NN) to efficiently find vectors that are closest to the query vector. Techniques like cosine similarity or Euclidean distance are used to measure the similarity between vectors.
+  - The database returns the indices of the closest matching vectors, which correspond to the most similar images in the original dataset. These images are then presented to the user as the search results.
